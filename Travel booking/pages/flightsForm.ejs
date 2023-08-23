@@ -1,0 +1,96 @@
+<html lang="en">
+	<%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/flightsForm.css">
+	</head>
+<body>
+	<%- include('./partials/nav.ejs') %>
+	<div class="form-head">
+		<i class="fa-solid fa-magnifying-glass fa-2xl style="color: #dddddf;""></i>		
+		<h1>Search for available flights... </h1>
+	</div>
+	<div class="create-blog content">
+		<% if(error.length>2){ %>
+			<p style="color: crimson;  text-align: center; font-weight: 300;"><%= error %></p>
+		<% } %>
+		<form action="/search" class="myForm" method="post">
+			<label for="from">From (airport name):</label>
+            <input type="text" name="fromName" id="from" list="airportList" required>
+            <!-- Hidden input field to store the selected airport code for "From" -->
+            <input type="hidden" name="from" id="fromCode">
+            <datalist id="airportList">
+            <!-- Options will be added dynamically -->
+            </datalist>
+            <label for="to">To (airport name):</label>
+            <input type="text" name="toName" id="to" list="airportList" required>
+            <!-- Hidden input field to store the selected airport code for "To" -->
+            <input type="hidden" name="to" id="toCode">
+			<label for="adults">Adults:</label>
+			<input type="number" name="adults" id="adults" >
+			<label for="class">Class:</label>
+			<select name="class" id="class">
+				<option value="first">First</option>
+				<option value="business">Business</option>
+				<option value="economy">Economy</option>
+			</select>
+			<label for="date" >Date:</label>
+			<input type="text" name="date" id="date" required placeholder="YYYY-MM-DD">
+			<button type="submit">Search</button>
+		</form>
+		
+		<!-- <div class="loader">Searching...</div> -->
+	</div>
+	<%- include('./partials/footer.ejs') %>
+	<script>
+		const fromInput = document.getElementById("from");
+        const toInput = document.getElementById("to");
+        const fromCodeInput = document.getElementById("fromCode");
+        const toCodeInput = document.getElementById("toCode");
+        const airportList = document.getElementById("airportList");
+        let airportData = []; // To store the loaded airport data
+
+        // Fetch the JSON data
+        fetch('/airports.json')
+            .then(response => response.json())
+            .then(data => {
+                airportData = data;
+                airportData.sort((a, b) => a.name.localeCompare(b.name));
+                airportData.forEach(airport => {
+                    const option = document.createElement("option");
+                    option.value = airport.name;
+                    option.setAttribute("data-code", airport.code);
+                    airportList.appendChild(option);
+                });
+            })
+            .catch(error => {
+                console.error("Error loading JSON data:", error);
+            });
+
+        // Add event listener to update the hidden input with the selected airport code for "From"
+        fromInput.addEventListener("input", () => {
+            const inputValue = fromInput.value.toLowerCase();
+            const matchingAirport = airportData.find(airport =>
+                airport.name.toLowerCase() === inputValue
+            );
+            if (matchingAirport) {
+                fromCodeInput.value = matchingAirport.code;
+            } else {
+                fromCodeInput.value = "";
+            }
+        });
+
+        // Add event listener to update the hidden input with the selected airport code for "To"
+        toInput.addEventListener("input", () => {
+            const inputValue = toInput.value.toLowerCase();
+            const matchingAirport = airportData.find(airport =>
+                airport.name.toLowerCase() === inputValue
+            );
+            if (matchingAirport) {
+                toCodeInput.value = matchingAirport.code;
+            } else {
+                toCodeInput.value = "";
+            }
+        });
+	</script>
+</body>
+</html>
+

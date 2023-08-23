@@ -1,0 +1,234 @@
+h1,h2,h3,h4,h5,h6,p{
+	color: black;
+}
+@media only screen and (min-width: 1101px){
+	.h2{
+	text-align: center;
+	margin: 2% 0;
+	font-size: 2.5em;
+	font-weight: 700;
+	color: rgb(21, 21, 59);
+}
+.ticket-li{
+	width: 50%;
+	margin:2% auto;
+	border-radius:10px;
+	background-color: rgb(254, 255, 173);
+	padding-left: 2%;
+	padding-right: 1%;
+	border-left: rgb(21, 21, 59) solid 50px;
+	border-right:dashed #c7c6c6 10px;
+}
+.color{
+	width: 5%;
+	background-color: rgb(21, 21, 59);
+}
+.title{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	margin: 1.5% 0;
+}
+.title i{
+	margin-right: 2%;
+}
+.basic{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+
+}
+.basic-part{
+	width: 50%;	
+}
+hr{
+	margin: 1%;
+}
+.basic-two{
+	text-align: center;
+}
+.details{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	padding: 0 2%;
+}
+.dets{
+	text-align: center;
+}
+.noTickets{
+	text-align: center;
+	top: 10%;
+	color: rgb(21, 21, 59);
+	font-size: 1.2em;
+	font-weight: 700;
+}
+.tickets-list form button{
+	text-align: center;
+	margin: 1% auto;
+	border-radius:5px ;
+	border: solid rgb(21, 21, 59);
+	background-color: rgb(21, 21, 59);
+	font-weight: 500;
+	color: aliceblue;
+	padding: 0.5% 1.5%;
+	margin-left: 50%;
+	transform: translateX(-50%);
+}
+}
+/* TABLET */
+@media only screen and (max-width: 1100px){
+	.h2{
+		text-align: center;
+		margin: 2% 0;
+		font-size: 2.5em;
+		font-weight: 700;
+		color: rgb(21, 21, 59);
+	}
+	.ticket-li{
+		width: 90%;
+		margin:2% auto;
+		border-radius:10px;
+		background-color: rgb(254, 255, 173);
+		padding-left: 2%;
+		padding-right: 1%;
+		border-left: rgb(21, 21, 59) solid 50px;
+		border-right:dashed #c7c6c6 10px;
+	}
+	.color{
+		width: 5%;
+		background-color: rgb(21, 21, 59);
+	}
+	.title{
+		display: flex;
+		align-items: center;
+		width: 100%;
+		margin: 1.5% 0;
+	}
+	.title i{
+		margin-right: 2%;
+	}
+	.basic{
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+	
+	}
+	.basic-part{
+		width: 50%;	
+	}
+	hr{
+		margin: 1%;
+	}
+	.basic-two{
+		text-align: center;
+	}
+	.details{
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		padding: 0 2%;
+	}
+	.dets{
+		text-align: center;
+	}
+	.noTickets{
+		text-align: center;
+		top: 10%;
+		color: rgb(21, 21, 59);
+		font-size: 1.2em;
+		font-weight: 700;
+	}
+	.tickets-list form button{
+		text-align: center;
+		margin: 1% auto;
+		border-radius:5px ;
+		border: solid rgb(21, 21, 59);
+		background-color: rgb(21, 21, 59);
+		font-weight: 500;
+		color: aliceblue;
+		padding: 0.5% 1.5%;
+		margin-left: 50%;
+		transform: translateX(-50%);
+	}
+}
+/* MOBILE */
+@media only screen and (max-width: 750px){
+	.h2{
+		text-align: center;
+		margin: 2% 0;
+		font-size: 2.5em;
+		font-weight: 700;
+		color: rgb(21, 21, 59);
+	}
+	.ticket-li{
+		width: 95%;
+		margin:2% auto;
+		border-radius:10px;
+		background-color: rgb(254, 255, 173);
+		padding-left: 2%;
+		padding-right: 1%;
+		border-left: rgb(21, 21, 59) solid 50px;
+		border-right:dashed #c7c6c6 10px;
+	}
+	.color{
+		width: 5%;
+		background-color: rgb(21, 21, 59);
+	}
+	.title{
+		display: flex;
+		align-items: center;
+		width: 100%;
+		margin: 1.5% 0;
+	}
+	.title i{
+		margin-right: 2%;
+	}
+	.basic{
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+	
+	}
+	.basic-part{
+		width: 50%;	
+	}
+	hr{
+		margin: 1%;
+	}
+	.basic-two{
+		text-align: center;
+	}
+	.details{
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		padding: 0 2%;
+	}
+	.basic h2,.basic h3,.basic h4{
+		font-size: 1em;
+	}
+	.dets{
+		text-align: center;
+		max-width: 30%;
+	}
+	.noTickets{
+		text-align: center;
+		top: 10%;
+		color: rgb(21, 21, 59);
+		font-size: 1.2em;
+		font-weight: 700;
+	}
+	.tickets-list form button{
+		text-align: center;
+		margin: 1% auto;
+		border-radius:5px ;
+		border: solid rgb(21, 21, 59);
+		background-color: rgb(21, 21, 59);
+		font-weight: 500;
+		color: aliceblue;
+		padding: 0.5% 1.5%;
+		margin-left: 50%;
+		transform: translateX(-50%);
+	}
+}

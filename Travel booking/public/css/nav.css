@@ -1,0 +1,61 @@
+nav{
+	color: aliceblue;
+	width:100%;
+	background-color:rgb(21, 21, 59);
+	display: flex;
+	justify-content: space-between;
+	padding: 2% 2.5%;
+	padding-right: 10%;
+	border-bottom: 1px solid #ddd;
+	text-transform: uppercase;
+	align-items: center;
+	margin-bottom: 0;
+  }
+  .part1-parent{
+	display:flex;
+	align-items: center;
+	margin-bottom: 1%;
+  }
+  .part1-parent i{
+	font-size: 1.3em;
+	margin-right: 4%;
+  }
+  .part1-parent a h1{
+	white-space: nowrap;
+  }
+  .part1-parent a:hover{
+	text-decoration: none;
+  }
+  .part1-parent a h1:hover{
+	text-decoration: none;
+	color: aliceblue;
+  }
+  nav ul{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+  }
+  nav li{
+	color: aliceblue;
+	list-style-type: none;
+	margin-left: 20px;
+  }
+  nav li a{
+	padding-bottom: 15%;
+	color: aliceblue;
+	font-weight: 800;
+  }
+  nav li a:hover{
+	text-decoration: none;
+	border-bottom: rgb(241, 102, 125) 3px solid;
+	color: aliceblue;
+  }
+  nav h1{
+	color: aliceblue;
+	font-size: 1.3em;
+	font-weight: 800;
+  }
+  nav p, nav a{
+	color: #a7a7a7;
+	font-weight: 300;
+  }

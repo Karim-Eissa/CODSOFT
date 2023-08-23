@@ -1,0 +1,113 @@
+<html lang="en">
+	<%- include('./partials/head.ejs') %>
+	<link rel="stylesheet" href="/css/details.css">
+	</head>
+<body>
+	<%- include('./partials/nav.ejs') %>
+	<div class="">
+		<% if (singleFlight) { %>
+		<h1 class="details-title">Flight details:</h1>
+		<div class="details-everything">
+			<div class="details-head">
+				<div class="">
+					<div class="cityToCity">
+						<div class="city citymutuals" style="margin-left: 0;"">
+							<h2><%= singleFlight.departureAirport.city%>, <%= singleFlight.departureAirport.country.label %></h2>
+						</div>
+						<div class="arrow-icon citymutuals">
+							<i class="fa-solid fa-arrow-right-long fa-2xl"></i>
+						</div>
+						<div class="city citymutuals" >
+							<h2><%= singleFlight.arrivalAirport.city%>, <%= singleFlight.arrivalAirport.country.label %></h2>
+						</div>
+					</div>
+					<div class="details-time">
+						<p><%= apiResponse.searchData.date%></p>
+					</div>
+				</div>
+				<hr style="width: 50%; text-align: center;">
+				<div class="booking">
+					<div class="booknow">
+						<a href="/flightsResults/<%= singleFlight.id %>/book">
+							<button type="button" class="btn btn-primary btn-lg">Book</button>
+						</a>
+					</div>
+				</div>
+			</div>
+			<hr style="width: 50%; text-align: center;">
+			<div class="sec-row">
+				<div class="sec-row-details">
+					<h4><%= singleFlight.flight_name %></h4>
+					<h4><%= singleFlight.flight_code %></h4>
+				</div>
+				<div class="sec-row-details">
+					<h4><%= singleFlight.departureAirport.time.slice(-8) %><span class="timezone"><%= singleFlight.departureAirport.tz %></span></h4>
+					<p><%= singleFlight.departureAirport.label %></p>
+				</div>
+				<div class="sec-row-details">
+					<h4><%= singleFlight.duration.text %></h4>
+					<p>Duration</p>
+				</div>
+				<div class="sec-row-details">
+					<h4><%= singleFlight.arrivalAirport.time.slice(-8) %><span class="timezone"><%= singleFlight.arrivalAirport.tz %></span></h4>
+					<p><%= singleFlight.arrivalAirport.label %></p>
+				</div>
+			</div>
+			<div class="third-row">
+				<div class="stops">
+					<h5><i class="fa-solid fa-stopwatch" style="margin-right: 4%;"></i><%= singleFlight.stops %></h5>
+					<% if ('0' in singleFlight.stopSummary) { %>
+						<ul class="stops-list">
+						  <% for (const stopKey in singleFlight.stopSummary) { %>
+							<% const stop = singleFlight.stopSummary[stopKey]; %>
+							<li>
+							  <p><span class="stop-bold">Airport (code):</span>  <%= stop.airport %></p>
+							  <% console.log("Stop duration:", stop.duration); %>
+							  <% const hours = Math.floor(stop.stopDuration / 60); %>
+							  <% const remainingMinutes = stop.stopDuration % 60; %>
+							  <p><span class="stop-bold">Stop duration: </span><%= hours %>h <%= remainingMinutes %>m</p>
+							</li>
+						  <% } %>
+						</ul>
+					  <% } else{ %>
+						<p class="noStops">There are no stops for this flight</p>
+					  <% } %>
+				</div>
+				<div class="baggage">
+					<h5><i class="fa-solid fa-suitcase-rolling" style="margin-right: 4%;"></i>Baggage:</h5>
+					<div class="checkin">
+						<h6><span>Checkin allowance: </span><%= singleFlight.baggage.checkIn.text ? singleFlight.baggage.checkIn.text : 'N/A' %></h6>
+						<p><span>Qty: </span><%= singleFlight.baggage.checkIn.quantity %></p>
+					</div>
+					<div class="cabin">
+						<h6><span>Cabin allowance: </span><%= singleFlight.baggage.cabin.text ? singleFlight.baggage.cabin.text : 'N/A'%></h6>
+						<p><span>Qty: </span><%= singleFlight.baggage.cabin.qty %></p>
+					</div>
+				</div>
+				<div class="baggage">
+					<h5><i class="fa-solid fa-money-bill" style="margin-right: 4%;"></i>Pricing:</h5>
+					<div class="checkin">
+						<% if (singleFlight.totals) { %>
+							<h6 style="margin:3% 0"><span>Base: </span>$<%= singleFlight.totals.base ? singleFlight.totals.base.toFixed(2) : 'N/A' %></h6>
+							<h6 style="margin:3% 0"><span>Tax: </span>$<%= singleFlight.totals.tax ? singleFlight.totals.tax.toFixed(2) : 'N/A' %></h6>
+							<h6 style="margin:3% 0"><span>Total: </span>$<%= singleFlight.totals.total ? singleFlight.totals.total.toFixed(2) : 'N/A' %></h6>
+						<% } else { %>
+							<p>Pricing information not available.</p>
+						<% } %>
+					</div>
+				</div>
+			</div>
+						
+		</div>
+		<% } else { %>
+			<p class="noFlights">No flight results available.</p>
+		<% } %>
+	</div>
+	<div class="flights-footer">
+		<%- include('./partials/footer.ejs') %>
+	</div>
+	<script>
+		
+	</script>
+</body>
+</html>

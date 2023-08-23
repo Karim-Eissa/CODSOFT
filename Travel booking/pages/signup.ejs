@@ -1,0 +1,37 @@
+<html lang="en">
+	<%- include('./partials/head.ejs') %>
+	<link rel="stylesheet" href="/css/signup.css">
+	</head>
+<body style="background-color: black; margin-bottom: 0;">
+	<%- include('./partials/nav.ejs') %>
+	<div class="content">
+		<div class="parent-home" style="z-index: -1;">
+			<img src="/images/plane.jpg">
+		</div>
+		<div class="mmm">
+			<h2>Sign up</h2>
+			<form action="/signup" method="post">
+				<label for="name">First name:</label>
+				<input id="name" name="name" type="text" required placeholder="ex: John">
+				<label for="email">Email:</label>
+				<input id="email" name="email" type="email" required placeholder="example@example.com">
+				<label for="password">Password:</label>
+				<input id="password" name="password" type="password" required placeholder="password">
+				<p class="already">Already have an account? <a href="/login">Login</a></p>
+				<button type="submit" class="btn btn-primary btn-lg">Sign up</button>
+				<% if(error.length>2){ %>
+					<p style="color: rgb(21, 21, 59); margin-top: 4%; margin-bottom: 0; white-space: wrap;">
+						<i class="fa-solid fa-triangle-exclamation fa-lg" style="color: #eeff00;"></i>
+						<%= error %>
+					</p>
+				<% } %>
+			</form>
+		</div>
+		<div class="abs">
+			<%- include('./partials/footer.ejs') %>
+		</div>
+	</div>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script src="/animate.js"></script>	
+</body>
+</html>

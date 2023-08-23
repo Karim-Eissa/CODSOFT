@@ -1,0 +1,28 @@
+<html lang="en">
+	<%- include('./partials/head.ejs') %>
+	<link rel="stylesheet" href="/css/index.css">
+	</head>
+<body style="background-color: black; margin-bottom: 0;">
+	<%- include('./partials/nav.ejs') %>
+	<div class="content">
+		<div class="parent-home" style="z-index: -1;">
+			<img src="/images/plane.jpg">
+		</div>
+		<div class="front-text">
+			<p style="z-index: 10;" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="200" class="first-p">Explore the world.</p>
+			<div class="front-header">
+				<h1 style="z-index: 10;" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="200">Fly Booking</h1>
+			</div>
+			<p style="z-index: 10;" class="second-p ">ONLINE FLIGHTS RESERVATION</p>
+			<a href="/search">
+				<button  style="z-index: 10;" type="button" class="btn btn-secondary btn-lg">Book your flight!</button>
+			</a>
+		</div>
+		<div class="abs">
+			<%- include('./partials/footer.ejs') %>
+		</div>
+	</div>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script src="/animate.js"></script>
+</body>
+</html>

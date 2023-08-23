@@ -1,0 +1,293 @@
+@media only screen and (min-width: 1101px){
+.blogs a{
+	display: block;
+	padding-left: 5px;
+	border-left: 6px solid crimson;
+  }
+  .blogs a:hover h3{
+	color: crimson;
+  }
+  .search-query{
+	margin: 1% auto;
+	margin-bottom: 4%;
+	max-width: 80%;
+	color: #1b1b1b;
+	display: flex;
+	justify-content: center;
+  }
+  
+  .search-query p{
+	color: black;
+	font-weight: 300;
+	text-align: center;
+	margin:0 2%;
+  }
+  .search-query p span{
+  font-weight: bold;
+  }
+  
+  .h2{
+	text-align: center;
+	color:rgb(33, 33, 97);
+	margin: 1% 0;
+	font-weight: bolder;
+  }
+  .flights-list{
+	margin: 0 auto;
+	max-width: 70%;
+	list-style-type: none;
+  }
+  .flightt{
+	color:#3b3b3b
+  }
+  .flight-li{
+	color: rgb(0, 0, 0);
+	border-radius: 10px;
+  }
+  .flight-li a{
+	display: flex;
+	justify-content: space-evenly;
+	 align-items: center;
+	text-align: start; 
+  }
+  .flightBanner{
+	margin: 0% 2%;
+	width: 15%;
+	text-align: center;
+  }
+  .flight-code{
+	padding-top: 1%;
+  }
+  .flight-li:hover{
+	background-color: #fff;
+	transition-duration: 0.5s;
+  }
+  .flight-li a:hover {
+	text-decoration: none;
+  }
+  .flight-content{
+	margin: 1% 0;
+  }
+  .flightBannerInfo{
+	color:#3b3b3b;
+  }
+  .flightBannerPrice{
+	color: black;
+	font-weight: 700;
+  }
+  .flight-name{
+	color: rgb(33, 33, 97);
+	font-weight: bold;
+  }
+  .noFlights{
+	margin-top: 10%;
+	font-weight: bold;
+	text-align: center; 
+	color:rgb(21, 21, 59);
+  }
+  .flights-footer{
+	margin-top:22%;
+  }
+  .flightBanner p{
+	color:#1b1b1b;
+	font-weight: 500;
+  }
+}
+@media only screen and (max-width: 1100px){
+	.blogs a{
+		display: block;
+		padding-left: 5px;
+		border-left: 6px solid crimson;
+	  }
+	  .blogs a:hover h3{
+		color: crimson;
+	  }
+	  .search-query{
+		margin: 1% auto;
+		margin-bottom: 4%;
+		max-width: 80%;
+		color: #1b1b1b;
+		display: flex;
+		justify-content: center;
+	  }
+	  
+	  .search-query p{
+		color: black;
+		font-weight: 300;
+		text-align: center;
+		margin:0 2%;
+	  }
+	  .search-query p span{
+	  font-weight: bold;
+	  }
+	  
+	  .h2{
+		text-align: center;
+		color:rgb(33, 33, 97);
+		margin: 1% 0;
+		font-weight: bolder;
+	  }
+	  .flights-list{
+		margin: 0 auto;
+		max-width: 90%;
+		list-style-type: none;
+	  }
+	  .flightt{
+		color:#3b3b3b
+	  }
+	  .flight-li{
+		color: rgb(0, 0, 0);
+		border-radius: 10px;
+	  }
+	  .flight-li a{
+		display: flex;
+		justify-content: space-evenly;
+		 align-items: center;
+		text-align: start; 
+	  }
+	  .flightBanner{
+		margin: 0% 2%;
+		width: 15%;
+		text-align: center;
+	  }
+	  .flight-code{
+		padding-top: 1%;
+	  }
+	  .flight-li:hover{
+		background-color: #fff;
+		transition-duration: 0.5s;
+	  }
+	  .flight-li a:hover {
+		text-decoration: none;
+	  }
+	  .flight-content{
+		margin: 1% 0;
+	  }
+	  .flightBannerInfo{
+		color:#3b3b3b;
+	  }
+	  .flightBannerPrice{
+		color: black;
+		font-weight: 700;
+	  }
+	  .flight-name{
+		color: rgb(33, 33, 97);
+		font-weight: bold;
+	  }
+	  .noFlights{
+		margin-top: 10%;
+		font-weight: bold;
+		text-align: center; 
+		color:rgb(21, 21, 59);
+	  }
+	  .flights-footer{
+		margin-top:22%;
+	  }
+	  .flightBanner p{
+		color:#1b1b1b;
+		font-weight: 500;
+	  }
+}
+@media only screen and (max-width: 750px){
+	.blogs a{
+		display: block;
+		padding-left: 0px;
+		border-left: 6px solid crimson;
+	  }
+	  .blogs a:hover h3{
+		color: crimson;
+	  }
+	  .search-query{
+		margin: 1% auto;
+		margin-bottom: 4%;
+		max-width: 90%;
+		color: #1b1b1b;
+		display: flex;
+		justify-content: center;
+	  }
+	  
+	  .search-query p{
+		color: black;
+		font-weight: 300;
+		text-align: center;
+		margin:0 2%;
+	  }
+	  .search-query p span{
+	  font-weight: bold;
+	  }
+	  .h2{
+		text-align: center;
+		color:rgb(33, 33, 97);
+		margin: 1% 0;
+		font-weight: bolder;
+	  }
+	  .flights-list{
+		margin: 0 auto;
+		max-width: 90%;
+		list-style-type: none;
+	  }
+	  .flightt{
+		color:#3b3b3b
+	  }
+	  .flight-li{
+		color: rgb(0, 0, 0);
+		border-radius: 10px;
+	  }
+	  .flight-li a{
+		display: flex;
+		justify-content: space-evenly;
+		 align-items: center;
+		text-align: start; 
+	  }
+	  .flightBanner{
+		margin: 0%;
+		width: 15%;
+		text-align: center;
+	  }
+	  .timee{
+		font-size: 0.9em;
+	  }
+	  .flight-code{
+		padding-top: 1%;
+		font-size: 0.9em;
+	  }
+	  .flight-li:hover{
+		background-color: #fff;
+		transition-duration: 0.5s;
+	  }
+	  .flight-li a:hover {
+		text-decoration: none;
+	  }
+	  .flight-content{
+		margin: 1% 0;
+	  }
+	  .duration{
+		font-size: 0.9em;
+	  }
+	  .flightBannerInfo{
+		color:#3b3b3b;
+	  }
+	  .flightBannerPrice{
+		color: black;
+		font-size: 1em;
+		font-weight: 600;
+	  }
+	  .flight-name{
+		color: rgb(33, 33, 97);
+		font-weight: bold;
+		font-size: 1em;
+	  }
+	  .noFlights{
+		margin-top: 10%;
+		font-weight: bold;
+		text-align: center; 
+		color:rgb(21, 21, 59);
+	  }
+	  .flights-footer{
+		margin-top:22%;
+	  }
+	  .flightBanner p{
+		color:#1b1b1b;
+		font-weight: 500;
+	  }
+}

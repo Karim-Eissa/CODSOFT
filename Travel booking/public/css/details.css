@@ -1,0 +1,350 @@
+@media only screen and (min-width: 1101px){
+.details-title{
+	color:rgb(21, 21, 59);
+	margin:1.5% 0;
+	font-weight: bold;
+	text-align: center;
+  }
+  .details-head{
+	align-items: center;
+	margin: 1% auto;
+  }
+  .cityToCity{
+	display: flex;
+	align-items: center;
+  }
+  .citymutuals h2{
+	color:#1b1b1b;
+	font-weight: 700;
+  }
+  .citymutuals{
+	margin:1% 2%;
+	width: 30%;
+	text-align: center;
+  }
+  .arrow-icon{
+	color: rgb(241, 102, 125);
+	width:20%;
+	text-align: center;
+	justify-content: center;
+	margin: 0 auto;
+  }
+  .details-time p{
+	color:#666666;
+	font-weight: 200;
+	font-size: 1.5em;
+	text-align: center;
+  }
+  .booking{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  .details-price{
+	margin-right: 1%;
+  }
+  .details-price p{
+	color: black;
+	font-weight: 100;
+	font-size: 1.5em;
+  }
+  .details-everything{
+	background-color: #f7f5f5;
+	padding:3%;
+	border-radius: 5px;
+	max-width: 80%;
+	margin:0 auto;
+  }
+  .sec-row{
+	display: flex;
+	justify-content: space-evenly;
+	margin-top:4%;
+  }
+  .sec-row-details{
+	text-align: center;
+	margin:0 1%;
+  }
+  .sec-row-details p{
+	color: #1b1b1b;
+	text-align: center;
+  }
+  .stops-list li{
+	align-items: center;
+	margin: 2% 0;
+  }
+  .timezone{
+	font-weight: 300;
+	font-size: 0.6em;
+  }
+  .stops-list li p{
+	color:#1b1b1b;
+	font-weight: 300;
+	margin: 0.5% 0;
+  }
+  .stop-bold{
+	font-weight: 700;
+  }
+  .third-row{
+	margin: 3% 0;
+	margin-bottom: 1%;
+	display: flex;
+	justify-content: space-evenly;
+  }
+  .checkin p,.cabin p{
+	color:#1b1b1b;
+	font-weight: 300;
+  }
+  .checkin h6,.cabin h6{
+	font-weight: 300;
+	margin:0.5% 0;
+  }
+  .checkin,.cabin{
+	margin:2% 0;
+  }
+  .checkin p span,.cabin p span,.checkin h6 span,.cabin h6 span{
+	font-weight: 700;
+  }
+  .noStops{
+	color:#1b1b1b;
+  }
+}
+/* TABLET */
+@media only screen and (max-width: 1100px){
+	.details-title{
+		color:rgb(21, 21, 59);
+		margin:1.5% 0;
+		font-weight: bold;
+		text-align: center;
+	  }
+	  .details-head{
+		align-items: center;
+		margin: 1% auto;
+	  }
+	  .cityToCity{
+		display: flex;
+		align-items: center;
+	  }
+	  .citymutuals h2{
+		color:#1b1b1b;
+		font-weight: 700;
+	  }
+	  .citymutuals{
+		margin:1% 2%;
+		width: 30%;
+		text-align: center;
+	  }
+	  .arrow-icon{
+		color: rgb(241, 102, 125);
+		width:20%;
+		text-align: center;
+		justify-content: center;
+		margin: 0 auto;
+	  }
+	  .details-time p{
+		color:#666666;
+		font-weight: 200;
+		font-size: 1.5em;
+		text-align: center;
+	  }
+	  .booking{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	  }
+	  .details-price{
+		margin-right: 1%;
+	  }
+	  .details-price p{
+		color: black;
+		font-weight: 100;
+		font-size: 1.5em;
+	  }
+	  .details-everything{
+		background-color: #f7f5f5;
+		padding:3%;
+		border-radius: 5px;
+		max-width: 95%;
+		margin:0 auto;
+	  }
+	  .sec-row{
+		display: flex;
+		justify-content: space-evenly;
+		margin-top:4%;
+	  }
+	  .sec-row-details{
+		text-align: center;
+		margin:0 1%;
+	  }
+	  .sec-row-details p{
+		color: #1b1b1b;
+		text-align: center;
+	  }
+	  .stops-list li{
+		align-items: center;
+		margin: 2% 0;
+	  }
+	  .timezone{
+		font-weight: 300;
+		font-size: 0.6em;
+	  }
+	  .stops-list li p{
+		color:#1b1b1b;
+		font-weight: 300;
+		margin: 0.5% 0;
+	  }
+	  .stop-bold{
+		font-weight: 700;
+	  }
+	  .third-row{
+		margin: 3% 0;
+		margin-bottom: 1%;
+		display: flex;
+		justify-content: space-evenly;
+	  }
+	  .checkin p,.cabin p{
+		color:#1b1b1b;
+		font-weight: 300;
+	  }
+	  .checkin h6,.cabin h6{
+		font-weight: 300;
+		margin:0.5% 0;
+	  }
+	  .checkin,.cabin{
+		margin:2% 0;
+	  }
+	  .checkin p span,.cabin p span,.checkin h6 span,.cabin h6 span{
+		font-weight: 700;
+	  }
+	  .noStops{
+		color:#1b1b1b;
+	  }
+}
+/* MOBILE */
+@media only screen and (max-width: 750px){
+	.details-title{
+		color:rgb(21, 21, 59);
+		margin:1.5% 0;
+		font-weight: bold;
+		text-align: center;
+	  }
+	  .details-head{
+		align-items: center;
+		margin: 1% auto;
+	  }
+	  .cityToCity{
+		display: flex;
+		align-items: center;
+	  }
+	  .citymutuals h2{
+		color:#1b1b1b;
+		font-weight: 700;
+		font-size: 1.5em;
+	  }
+	  .citymutuals{
+		margin:1% 2%;
+		width: 30%;
+		text-align: center;
+	  }
+	  .arrow-icon{
+		color: rgb(241, 102, 125);
+		width:20%;
+		text-align: center;
+		justify-content: center;
+		margin: 0 auto;
+	  }
+	  .details-time p{
+		color:#666666;
+		font-weight: 200;
+		font-size: 1em;
+		text-align: center;
+	  }
+	  .booking{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	  }
+	  .details-price{
+		margin-right: 1%;
+	  }
+	  .details-price p{
+		color: black;
+		font-weight: 100;
+		font-size: 1.5em;
+	  }
+	  .details-everything{
+		background-color: #f7f5f5;
+		padding:3%;
+		border-radius: 5px;
+		max-width: 90%;
+		margin:0 auto;
+	  }
+	  .sec-row{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		margin-top:4%;
+	  }
+	  .sec-row-details{
+		text-align: center;
+		display: flex;
+		justify-content: start;
+		margin:4% 1%;
+		align-items: center;
+		text-align: start;
+		width:100%;
+	  }
+	  .sec-row-details p{
+		color: #1b1b1b;
+		text-align: left;
+		font-size: 0.9em;
+	  }
+	  .sec-row-details h4{
+		margin: 0 4%;
+		font-size: 1.3em;
+	  }
+	  .stops-list li{
+		align-items: center;
+		margin: 2% 0;
+	  }
+	  .timezone{
+		font-weight: 300;
+		font-size: 0.6em;
+	  }
+	  .stops-list li p{
+		color:#1b1b1b;
+		font-weight: 300;
+		margin: 0.5% 0;
+	  }
+	  .stop-bold{
+		font-weight: 700;
+	  }
+	  .third-row{
+		margin: 3% 0;
+		margin-bottom: 1%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	  }
+	  .stops,.baggage{
+		width:100%;
+		text-align: center;
+		margin: 2% 0;
+		margin-left: 4%;
+	  }
+	  .checkin p,.cabin p{
+		color:#1b1b1b;
+		font-weight: 300;
+	  }
+	  .checkin h6,.cabin h6{
+		font-weight: 300;
+	  }
+	  .checkin,.cabin{
+		margin:2% 0;
+	  }
+	  .checkin p span,.cabin p span,.checkin h6 span,.cabin h6 span{
+		font-weight: 700;
+	  }
+	  .noStops{
+		color:#1b1b1b;
+	  }
+}

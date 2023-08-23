@@ -1,0 +1,52 @@
+<html lang="en">
+	<%- include('./partials/head.ejs') %>
+	<link rel="stylesheet" href="/css/flights.css">
+	</head>
+<body>
+	<%- include('./partials/nav.ejs') %>
+	<div class="blogs content">
+		<% if (apiResponse) { %>
+		<div class="sticky-header">
+			<h2 class="h2">ALL FLIGHTS</h2>
+			<div class="search-query">
+				<p class="flight-headers"><span>On: <br></span><%= apiResponse.searchData.date%></p>
+				<p class="flight-headers"><span>From: <br></span><%= apiResponse.searchData.from%></p>
+				<p class="flight-headers"><span>To: <br></span><%= apiResponse.searchData.to%></p>
+				<p class="flight-headers"><span>Adults: <br></span><%= apiResponse.searchData.adult%></p>
+				<p class="flight-headers"><span>Class: <br></span><%= apiResponse.searchData.type%></p>
+			</div>
+		</div>
+			<ul class="flights-list">
+				<% apiResponse.results.forEach(flight => { %>
+					<li class="flight-li">
+						<a href="/flightsResults/<%= flight.id%>">
+							<div class="flightBanner" style="text-align: left;">
+								<h4 class="flight-content flight-code flightt"><%= flight.flight_code %></h4>
+								<h4 class="flight-content flight-name"><%= flight.flight_name %></h4>
+							</div>
+							<div class="flightBanner">
+								<h4 class="flight-content flightBannerInfo timee"><%= flight.departureAirport.time.slice(-8) %></h4>
+								<p class="timee"><%= flight.departureAirport.tz %></p>
+							</div>
+							<div class="flightBanner">
+								<h4 class="flight-content flightBannerInfo duration"><%= flight.duration.text %></h4>
+								<p><%= flight.stops %></p>
+							</div>
+							<div class="flightBanner">
+								<h4 class="flight-content flightBannerInfo flightBannerPrice">$<%= flight.totals.total.toFixed(2) %></h4>
+							</div>
+						</a>
+						<hr>
+					</li>
+				<% }); %>
+			</ul>
+		<% } else { %>
+			<p class="noFlights">No flight results available.</p>
+		<% } %>
+	</div>
+	<div class="flights-footer">
+		<%- include('./partials/footer.ejs') %>
+	</div>
+</body>
+</html>
+

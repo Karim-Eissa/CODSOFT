@@ -1,0 +1,66 @@
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<link rel="stylesheet" href="/css/tickets.css">
+</head>
+<body>
+  <%- include('./partials/nav.ejs') %>
+  <div class="tickets content">
+    <h2 class="h2">My Tickets</h2>
+    <ul class="tickets-list">
+      <% if (tickets.length > 0) { %>
+        <% tickets.forEach(ticket => { %>
+          <li class="ticket-li">
+			<div style="padding: 1% 2%;">
+				<div class="title">
+					<i class="fa-solid fa-plane fa-2xl" style="color: #f1667d;"></i> 
+					<h1 style="color: rgb(21, 21, 59); font-weight: bold; font-size: 1.5em;">Fly Booking</h1>
+				</div>
+				<div class="basic">
+					<div class="basic-one basic-part">
+						<p style="font-weight: bold;">NAME</p>
+						<h3 style="font-weight: 200;"><%= ticket.fullName %></h3>
+						<p style="font-weight: bold;">TRIP</p>
+						<h4 style="font-weight: 200;"><%= ticket.from %> to <%=ticket.to %></h4>
+					</div>
+					<div class="basic-two basic-part">
+						<h3><%= ticket.flightName %></h3>
+						<h2><%= ticket.flightCode %></h2>
+						<h5 style="font-weight: bold;"><%= ticket.class %></h5>
+					</div>
+				</div>
+				<hr>
+				<div class="details">
+					<div class="dets time">
+						<p style="font-weight: bold;">TIME</p>
+						<p><%= ticket.time %></p>
+						<p><%= ticket.timezone %></p>
+					</div>
+					<div class="dets date">
+						<p style="font-weight: bold;">DATE</p>
+						<p><%= ticket.date %></p>
+					</div>
+					<div class="dets seat">
+						<p style="font-weight: bold;">SEAT</p>
+						<p><%= ticket.seat %></p>
+					</div>
+					<div class="dets gate">
+						<p style="font-weight: bold;">GATE</p>
+						<p><%= ticket.gate %></p>
+					</div>
+				</div>
+			</div>
+          </li>
+		  <form action="/tickets/<%= ticket._id %>/delete" method="POST" onsubmit="return confirm('Are you sure you want to cancel your flight?');">
+			<button type="submit">Cancel flight</button>
+		  </form>
+        <% }); %>
+      <% } else { %>
+        <p class="noTickets">You don't have any tickets yet.</p>
+      <% } %>
+    </ul>
+  </div>
+  <div class="flights-footer">
+    <%- include('./partials/footer.ejs') %>
+  </div>
+</body>
+</html>

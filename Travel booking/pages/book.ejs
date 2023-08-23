@@ -1,0 +1,67 @@
+<html lang="en">
+	<%- include('./partials/head.ejs') %>
+	<link rel="stylesheet" href="/css/book.css">
+	</head>
+<body>
+	<%- include('./partials/nav.ejs') %>
+	<div class="">
+		<% if (singleFlight) { %>
+		<div class="create-blog content">
+			<div class="plane-background"><img src="/images/bg_flights.fa74a391.png"></div>
+			<form action="/flightsResults/:flightid/book" class="myForm" method="post" onsubmit="return confirm('Proceed to book the ticket?');">
+				<h3 class="section-h1">Ticket & passport details:</h1>
+				<p>Fill this form for each adult: <%= apiResponse.searchData.adult %> </p>
+				<div class="ticket-parent">
+					<div class="ticket-part ticketCh">
+						<label for="from">From:</label>
+						<input type="text" name="from" id="from" value="<%= apiResponse.searchData.from %>" readonly>
+						<label for="to">To:</label>
+						<input type="text" name="to" id="to" value="<%= apiResponse.searchData.to %>" readonly>
+						<label for="adults">Adults:</label>
+						<input type="text" name="adults" id="adults" value="<%= apiResponse.searchData.adult %>" readonly>
+						<label for="class">Class:</label>
+						<input type="text" name="class" id="class" value="<%= apiResponse.searchData.type %>" readonly>
+						<label for="date" >Flight code:</label>
+						<input type="text" name="date" id="date" value="<%= apiResponse.searchData.date %>" readonly>
+					</div>
+					<div class="ticket-part ticketCh">
+						<label for="flightName" >Flight name:</label>
+						<input type="text" name="flightName" id="flightName" value="<%= singleFlight.flight_name %>" readonly>
+						<label for="flightCode" >Flight code:</label>
+						<input type="text" name="flightCode" id="flightCode" value="<%= singleFlight.flight_code %>" readonly>
+						<label for="time" >Time:</label>
+						<input type="text" name="time" id="time" value="<%= singleFlight.departureAirport.time.slice(-8) %>" readonly>
+						<label for="timezone" >Timezone:</label>
+						<input type="text" name="timezone" id="timezone" value="<%= singleFlight.departureAirport.tz %>" readonly>
+						<label for="price" >Price:</label>
+						<input type="text" name="price" id="price" value="$<%= singleFlight.totals.total.toFixed(2) %>" readonly>
+					</div>
+					<div class="passport ticketCh">
+						<label for="fullName" >Full name:</label>
+						<input type="text" name="fullName" id="fullName" required>
+						<label for="dateBirth" >Date of birth:</label>
+						<input type="text" name="dateBirth" id="dateBirth" required placeholder="YYYY-MM-DD">
+						<label for="gender" >Gender:</label>
+						<select name="gender" id="gender" class="gender" style="width: 100%;">
+							<option value="male">Male</option>
+							<option value="female">Female</option>
+						</select>
+						<label for="passportId" >Passport ID:</label>
+						<input type="text" name="passportId" id="passportId"  required>
+						<label for="dateIssue" >Date of issue:</label>
+						<input type="text" name="dateIssue" id="dateIssue" required placeholder="YYYY-MM-DD">	
+						<input type="text" name="id" id="id" value="<%= singleFlight.id %>" style="display: none; position: absolute;" readonly>			
+						<button type="submit">Book</button>
+					</div>
+				</div>
+			</form>
+			<div class="flights-footer">
+				<%- include('./partials/footer.ejs') %>
+			</div>
+		</div>
+		<% } else { %>
+			<p class="noFlights">No flight results available.</p>
+		<% } %>
+	</div>
+</body>
+</html>
