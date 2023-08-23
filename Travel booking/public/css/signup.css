@@ -205,8 +205,9 @@
 	}
 	
 /* login */
+@media only screen and (min-width: 1101px){
 .mmm{
-	width:80%;
+	width:40%;
 	background-color: rgb(255, 255, 255);
 	border-radius: 5px;
 	padding: 3% 0;
@@ -253,3 +254,104 @@
   .already a{
 	color: rgb(33, 33, 97);
   }
+}
+@media only screen and (max-width: 1100px){
+	.mmm{
+		width:50%;
+		background-color: rgb(255, 255, 255);
+		border-radius: 5px;
+		padding: 3% 0;
+		opacity: 80%;
+	  }
+	  .mmm h2{
+		text-align: center;
+		color: #1b1b1b;
+		font-weight: 700;
+		margin: 2% 0;
+		color:rgb(21, 21, 59)
+	  }
+	  .mmm form{
+		display: flex;
+		flex-direction: column;
+		width: 60%;
+		margin: 0 auto;
+	  }
+	  .mmm form input{
+		margin:1% auto;
+		margin-bottom: 2%;
+		width: 100%;
+		padding:3% 4%;
+	  }
+	  .mmm form label{
+		text-align: start;
+		margin-top: 1%;
+	  }
+	  .mmm form .btn{
+		margin:2% auto;
+		margin-top: 4%;
+		margin-bottom: 0;
+		border-color: rgb(33, 33, 97);
+		width:70%;
+		background-color: rgb(33, 33, 97);
+	  }
+	  .already{
+		color:#1b1b1b;
+		text-align: start;
+		font-weight: 300;
+		font-size: 0.9em;
+		margin: 1% 0;
+	  }
+	  .already a{
+		color: rgb(33, 33, 97);
+	  }
+}
+@media only screen and (max-width: 750px){
+	.mmm{
+		width:80%;
+		background-color: rgb(255, 255, 255);
+		border-radius: 5px;
+		padding: 3% 0;
+		opacity: 80%;
+	  }
+	  .mmm h2{
+		text-align: center;
+		color: #1b1b1b;
+		font-weight: 700;
+		margin: 2% 0;
+		color:rgb(21, 21, 59)
+	  }
+	  .mmm form{
+		display: flex;
+		flex-direction: column;
+		width: 60%;
+		margin: 0 auto;
+	  }
+	  .mmm form input{
+		margin:1% auto;
+		margin-bottom: 2%;
+		width: 100%;
+		padding:3% 4%;
+	  }
+	  .mmm form label{
+		text-align: start;
+		margin-top: 1%;
+	  }
+	  .mmm form .btn{
+		margin:2% auto;
+		margin-top: 4%;
+		margin-bottom: 0;
+		border-color: rgb(33, 33, 97);
+		width:70%;
+		background-color: rgb(33, 33, 97);
+	  }
+	  .already{
+		color:#1b1b1b;
+		text-align: start;
+		font-weight: 300;
+		font-size: 0.9em;
+		margin: 1% 0;
+	  }
+	  .already a{
+		color: rgb(33, 33, 97);
+	  }
+}
