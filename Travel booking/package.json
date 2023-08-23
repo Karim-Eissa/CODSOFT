@@ -2,10 +2,11 @@
   "name": "node-js",
   "version": "1.0.0",
   "description": "",
-  "main": "test.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node test.js"
+    "start": "node main.js",
+    "build": "echo \"Build script executed\""
   },
   "author": "",
   "license": "ISC",
