@@ -24,7 +24,6 @@ module.exports={
 	},
 	search_post: async(req, res) => {
 		const newQuery=req.body;
-		console.log(newQuery)
 		const options = {
 			method: 'GET',
 			url: 'https://flight-fare-search.p.rapidapi.com/v2/flights/',
