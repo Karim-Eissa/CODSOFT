@@ -17,10 +17,8 @@ module.exports={
 			// Fetch tickets associated with the logged-in user
 			const userTickets = await Ticket.find({ user: res.locals.user._id }).sort({ createdAt: -1 });
 			// Render the tickets view and pass the tickets data
-			console.log(userTickets)
 			res.render('tickets', { title: 'My Tickets', tickets: userTickets });
 		  } catch (err) {
-			console.error(err);
 			res.status(500).send('Internal Server Error');
 		  }
 	},
@@ -39,19 +37,17 @@ module.exports={
 			currency: 'USD'
 			},
 			headers: {
-			'X-RapidAPI-Key': process.env.RAPID_API_KEY2,
+			'X-RapidAPI-Key': process.env.RAPID_API_KEY1,
 			'X-RapidAPI-Host': 'flight-fare-search.p.rapidapi.com'
 			}
 		};
 		try {        
 			const apiResponse = await axios.request(options)
 			storedApiResponse = apiResponse.data
-			console.log(storedApiResponse);
 			res.redirect('/flightsResults')
 
 		} catch (err) {
 			res.render('flightsForm', { title: 'Search',error:'Something went wrong. Please try again.'});
-			console.log(err)
 		}
 	},
 	flightsResults_get: (req, res) => {
@@ -69,7 +65,6 @@ module.exports={
 	},
 	book_post: async(req,res)=>{
 		const flightid=req.body.id;
-		console.log(req.body)
 		const randomNumber = Math.floor(Math.random() * 500) + 1;
 		const randomLetter = Math.random() < 0.5 ? 'A' : 'B';
 		const result = randomNumber + randomLetter;
@@ -94,8 +89,6 @@ module.exports={
 			gate:randomGate
 		});
 		await newTicket.save();
-		console.log(newTicket)
-        console.log('ticket saved');
 		let adultCnt=req.body.adults;
 		if(adultCnt>1){
 			res.redirect(`/flightsResults/${flightid}/book`)
@@ -122,7 +115,6 @@ module.exports={
 		// Redirect to the tickets page after successful deletion
 		res.redirect('/tickets');
 		} catch (err) {
-		console.error(err);
 		res.status(500).send('Internal Server Error');
 		}
 	}
