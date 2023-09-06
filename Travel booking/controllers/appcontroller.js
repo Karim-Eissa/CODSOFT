@@ -36,7 +36,7 @@ module.exports={
 			currency: 'USD'
 			},
 			headers: {
-			'X-RapidAPI-Key': process.env.RAPID_API_KEY1,
+			'X-RapidAPI-Key': process.env.RAPID_API_KEY2,
 			'X-RapidAPI-Host': 'flight-fare-search.p.rapidapi.com'
 			}
 		};
